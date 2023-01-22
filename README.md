@@ -8,7 +8,7 @@ Et l'ensemble des conteneurs est hébergé sur une VM avec une distribution linu
 Les images nécessaires ce trouvent sur le lien suivant:
  - https://hub.docker.com/repositories/khagu
  - application
- - metrics
+ - raws:2.0.0
  - cyclomatique
  - robotframework
  - unit

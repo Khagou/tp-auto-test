@@ -1,0 +1,21 @@
+main.py
+    F 24:0 get_machine - A
+    F 14:0 liste_machine - A
+    F 10:0 hello_world - A
+application/application.py
+    C 1:0 Application - A
+    M 3:4 Application.__init__ - A
+    M 9:4 Application.add - A
+    M 12:4 Application.get - A
+    M 15:4 Application.liste - A
+machine/machine.py
+    C 3:0 Machine - A
+    M 24:4 Machine.liste - A
+    M 7:4 Machine.__init__ - A
+    M 15:4 Machine.add - A
+    M 21:4 Machine.get - A
+    M 33:4 Machine.edit - A
+    M 36:4 Machine.delete - A
+
+15 blocks (classes, functions, methods) analyzed.
+Average complexity: A (1.5333333333333334)
