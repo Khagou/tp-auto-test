@@ -1,0 +1,8 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+
+RUN pip3 install robotframework
+RUN pip3 install robotframework-requests 
+
+CMD python3 -m robot test/system/machine.robot;mv report.html log.html output.xml /usr/src/app/rapport/robot-framework

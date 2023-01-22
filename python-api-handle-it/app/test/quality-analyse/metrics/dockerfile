@@ -1,0 +1,7 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+
+RUN pip3 install radon
+
+CMD radon hal -e "*/__init__.py" *.py **/*.py >> /usr/src/app/rapport/quality/metrics.txt

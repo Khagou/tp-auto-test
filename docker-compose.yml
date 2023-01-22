@@ -1,0 +1,76 @@
+version: '3.1'
+
+services:
+  application:
+    image: application
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      testnetwork:
+    ports:
+     - 5000:5000
+    volumes:
+      - type: bind
+        source: ./python-api-handle-it/app/
+        target: /usr/src/app
+
+  unittest:
+    image: unit
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      testnetwork:
+    volumes:
+      - type: bind
+        source: ./python-api-handle-it/app/
+        target: /usr/src/app
+
+  pycodestyle:
+    image: pycodestyle
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      testnetwork:
+    volumes:
+      - type: bind
+        source: ./python-api-handle-it/app/
+        target: /usr/src/app
+        
+  metrics:
+    image: metrics
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      testnetwork:
+    volumes:
+      - type: bind
+        source: ./python-api-handle-it/app/
+        target: /usr/src/app
+        
+  cyclomatique:
+    image: cyclomatique
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      testnetwork:
+    volumes:
+      - type: bind
+        source: ./python-api-handle-it/app/
+        target: /usr/src/app
+    
+  robotframework:
+    image: robot
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      testnetwork:
+    volumes:
+      - type: bind
+        source: ./python-api-handle-it/app/
+        target: /usr/src/app
+    
+volumes:
+  myapp:
+
+networks:
+  testnetwork:

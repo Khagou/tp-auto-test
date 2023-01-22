@@ -1,0 +1,8 @@
+FROM python:3
+
+WORKDIR /usr/src/app
+
+RUN pip3 install radon
+
+
+CMD radon cc --total-average *.py **/*.py >> /usr/src/app/rapport/quality/radon.txt;
