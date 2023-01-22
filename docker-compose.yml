@@ -35,9 +35,9 @@ services:
       - type: bind
         source: ./python-api-handle-it/app/
         target: /usr/src/app
-        
-  metrics:
-    image: metrics
+
+  raws:
+    image: raws
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     networks:
