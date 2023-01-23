@@ -3,6 +3,7 @@ FROM python:3
 WORKDIR /usr/src/app
 
 RUN pip3 install radon
+RUN pip3 install json2tree
 
 
-CMD radon cc --total-average *.py **/*.py >> /usr/src/app/rapport/quality/radon.txt;
+CMD radon cc -j --total-average *.py **/*.py >> /usr/src/app/rapport/quality/radon.json; json2tree -j /usr/src/app/rapport/quality/radon.json -o /usr/src/app/rapport/quality/radon.html
