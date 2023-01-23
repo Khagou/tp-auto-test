@@ -6,4 +6,4 @@ RUN pip3 install radon
 RUN pip3 install json2tree
 
 
-CMD radon raw -j -e "*/__init__.py" *.py **/*.py >> /usr/src/app/rapport/quality/raws.json; json2tree -j /usr/src/app/rapport/quality/raws.json -o /usr/src/app/rapport/quality/raws.html
+CMD radon raw -j -e "*/__init__.py" *.py **/*.py > /usr/src/app/rapport/quality/raws.json; json2tree -j /usr/src/app/rapport/quality/raws.json -o /usr/src/app/rapport/quality/raws.html

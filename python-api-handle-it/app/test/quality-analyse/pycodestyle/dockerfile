@@ -4,4 +4,4 @@ WORKDIR /usr/src/app
 
 RUN pip3 install pycodestyle
 
-CMD pycodestyle --statistics *.py **/*.py >> /usr/src/app/rapport/quality/pycodestyle.txt
+CMD pycodestyle --statistics *.py **/*.py > /usr/src/app/rapport/quality/pycodestyle.txt
